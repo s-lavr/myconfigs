@@ -1,13 +1,20 @@
-######## Location: ~/.tmux.com ########
+######## Location: ~/.tmux.conf ########
 
-######### Plugins ########
+# Install TPM: git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+######## Plugins ########
 
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'tmux-plugins/tmux-sensible'
+
+# Initialize TMUX plugin manager
+
 run -b '~/.tmux/plugins/tpm/tpm'
 
-########## Change panes ##########
+# Reload TMUX: $ tmux source ~/.tmux.conf
+
+######## Change panes ########
 
 bind -n M-Left select-pane -L
 bind -n M-Right select-pane -R
